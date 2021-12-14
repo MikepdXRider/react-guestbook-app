@@ -1,10 +1,11 @@
 import React from 'react'
 
-export default function GuestForm() {
+export default function EntryForm() {
     // onSubmit handler to set custom hook state.
     
     return (
         <div>
+            <p>Form</p>
         {/* 
             - fieldset.
             - legend.
