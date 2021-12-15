@@ -5,13 +5,12 @@ import { useUser } from '../../context/UserContext/UserContext.jsx';
 
 export default function EntryForm() {
     const [entryField, setEntryField] = useState('');
-    // destructure custom hook here
+    // ☝ Do not initialize your state with custom hooks. This is handled on the context level. 
     const {setEntries} = useEntries();
     const {username} = useUser();
 
     function handleSubmit(e) {
-        e.preventDefault();
-        // send the entryField to the global entry state.
+        e.preventDefault()
         setEntries((prevState) => [...prevState, {username, entry: entryField}]);
     }
     

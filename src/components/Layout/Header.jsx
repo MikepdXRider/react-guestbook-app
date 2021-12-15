@@ -13,7 +13,6 @@ export default function Header() {
                 ? <p>Welcome, {username}!</p>
                 : <p>This is a header!</p>
             }
-            {/* Dynamically render the current user name */}
         </div>
     )
 }
