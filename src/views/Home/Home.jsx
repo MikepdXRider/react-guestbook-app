@@ -1,5 +1,5 @@
 import React from 'react'
-import Entries from '../../components/Entries/Entries'
+import Entries from '../../components/Entries/EntryList'
 import EntryForm from '../../components/Forms/EntryForm'
 import NameForm from '../../components/Forms/NameForm.jsx'
 

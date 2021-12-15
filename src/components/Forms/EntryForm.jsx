@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
+// import custom hook here
 
 export default function EntryForm() {
-    // onSubmit handler to set custom hook state.
+    const [entryField, setEntryField] = useState('');
+    // destructure custom hook here
+
+    function handleSubmit() {
+        // send the entryField to the global entry state.
+    }
     
     return (
-        <form>
+        <form onSubmit={() => handleSubmit()}>
             <fieldset>
-                <legend>Entrie</legend>
-                <input type="text" />
+                <legend>Entry</legend>
+                <input value={entryField} onChange={(e) => setEntryField(e.target.value)} type="text" />
                 <button>Add Entry</button>
             </fieldset>
         </form>
