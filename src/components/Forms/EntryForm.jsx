@@ -9,13 +9,14 @@ export default function EntryForm() {
     const {setEntries} = useEntries();
     const {username} = useUser();
 
-    function handleSubmit() {
+    function handleSubmit(e) {
+        e.preventDefault();
         // send the entryField to the global entry state.
         setEntries((prevState) => [...prevState, {username, entry: entryField}]);
     }
     
     return (
-        <form onSubmit={() => handleSubmit()}>
+        <form onSubmit={(e) => handleSubmit(e)}>
             <fieldset>
                 <legend>Entry</legend>
                 <input value={entryField} onChange={(e) => setEntryField(e.target.value)} type="text" />

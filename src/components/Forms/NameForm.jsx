@@ -12,7 +12,7 @@ export default function NameForm() {
     }
     
     return (
-        <form onSubmit={() => handleSubmit(e)}>
+        <form onSubmit={(e) => handleSubmit(e)}>
             <fieldset>
                 <legend>Name</legend>
                 <input value={nameField} onChange={(e) => setNameField(e.target.value)} type="text" />
