@@ -1,13 +1,18 @@
-import React from 'react'
-// import hook
-// call in custom entries hook.
-// if hooks array is not length 0, render each entry. 
+import React from 'react';
+import { useEntries } from '../../context/EntriesContext/EntriesContext.jsx';
+import Entry from './Entry.jsx';
 
-export default function Entries() {
+export default function EntryList() {
+    const {entries} = useEntries();
+
     return (
-        <div>
-            <p>Entries</p>
-            {/*  This component dynamically renders the users entries. All that exist, even if it's a different user. */}
-        </div>
+        <section>
+            {
+                entries[0] 
+                // 💪 shout out to Zack & Erich(OG!) for this i(index) trick with the map and key. Yall the MVPs!!!
+                ? entries.map((entry, i) => <Entry key={i} entry={entry}/>)
+                : <p>Entries</p>
+            }
+        </section>
     )
 }
