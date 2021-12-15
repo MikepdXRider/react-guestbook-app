@@ -13,7 +13,8 @@ export default function Home() {
     }
 
     return (
-        <div>
+        <main>
+            <section>
             {
                 username 
                 ? <div>
@@ -22,8 +23,12 @@ export default function Home() {
                 </div>
                 : <NameForm />
             }
-            <EntryForm />
-            <Entries />
-        </div>
+            </section>
+
+            <section>
+                <EntryForm />
+                <Entries />
+            </section>
+        </main>
     )
 }

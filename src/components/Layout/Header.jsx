@@ -7,12 +7,12 @@ export default function Header() {
     const userBool = Boolean(username);
 
     return (
-        <div>
+        <header>
             {
                 username
                 ? <p>Welcome, {username}!</p>
                 : <p>This is a header!</p>
             }
-        </div>
+        </header>
     )
 }
