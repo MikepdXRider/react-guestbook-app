@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
-// import custom hooooook! 
-
+import { useUser } from '../../context/UserContext/UserContext.jsx';
 
 export default function NameForm() {
     const [nameField, setNameField] = useState('');
-    // destructure custom hook here
+    // ☝ Do not initialize your state with custom hooks. This is handled on the context level. 
+    const {setUsername} = useUser();
 
-    function handleSubmit() {
-        // send the nameField to the global name state.
+    function handleSubmit(e) {
+        e.preventDefault();
+        setUsername(nameField);
     }
     
     return (
-        <form onSubmit={() => handleSubmit()}>
+        <form onSubmit={() => handleSubmit(e)}>
             <fieldset>
                 <legend>Name</legend>
                 <input value={nameField} onChange={(e) => setNameField(e.target.value)} type="text" />

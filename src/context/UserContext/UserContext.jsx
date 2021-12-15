@@ -7,10 +7,10 @@ const UserContext = createContext();
 
 // Define a functional component which recieves children as props, contains state, and returns a provider component with values.
 const UserProvider = ({children}) => {
-    const [user, setUser] = useState([]);
+    const [username, setUsername] = useState('');
 
     return(
-        <UserContext.Provider value={{user, setUser}}>
+        <UserContext.Provider value={{username, setUsername}}>
             {children}
         </UserContext.Provider>
     )
@@ -26,3 +26,5 @@ const useUser = () => {
     //  return context
     return context;
 }
+
+export { UserProvider, useUser }

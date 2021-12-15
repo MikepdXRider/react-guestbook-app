@@ -26,3 +26,5 @@ const useEntries = () => {
     //  return context
     return context;
 }
+
+export { EntriesProvider, useEntries }
