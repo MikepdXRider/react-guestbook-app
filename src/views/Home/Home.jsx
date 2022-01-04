@@ -15,6 +15,7 @@ export default function Home() {
     return (
         <main>
             <section>
+            {/* This whole ternary will be removed because the page will be in a protected route. */}
             {
                 username 
                 ? <div>

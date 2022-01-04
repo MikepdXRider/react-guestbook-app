@@ -13,6 +13,10 @@ const UserProvider = ({children}) => {
     )
 }
 
+
+// 
+// Could move to useAuth.jsx in the hooks folder. 
+// 
 const useUser = () => {
     const context = useContext(UserContext);
 

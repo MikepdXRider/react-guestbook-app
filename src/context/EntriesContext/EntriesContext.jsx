@@ -13,6 +13,9 @@ const EntriesProvider = ({children}) => {
     )
 }
 
+// 
+// Could move this to useEntries.jsx in hooks folder.
+// 
 const useEntries = () => {
     const context = useContext(EntriesContext);
     
