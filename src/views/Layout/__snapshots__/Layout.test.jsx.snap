@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the home view 1`] = `
+<div>
+  <div>
+    <header>
+      <p>
+        This is a header!
+      </p>
+    </header>
+    <footer>
+      <p>
+        This is a footer!
+      </p>
+    </footer>
+  </div>
+</div>
+`;

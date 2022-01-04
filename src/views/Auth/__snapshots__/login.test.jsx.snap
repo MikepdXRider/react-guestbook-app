@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the login view 1`] = `
+<div>
+  <fieldset
+    class="w-1/4 border p-4"
+  >
+    <legend>
+      Sign In
+    </legend>
+    <form
+      class="grid grid-cols-[1fr_2fr] grid-rows-3"
+    >
+      <label
+        class="self-center text-right"
+        for="password"
+      >
+        Username
+      </label>
+      <input
+        class="border p-2 m-3"
+        id="username"
+        name="username"
+        required=""
+        type="text"
+        value=""
+      />
+      <label
+        class="self-center text-right"
+        for="password"
+      >
+        Password
+      </label>
+      <input
+        class="border p-2 m-3"
+        id="password"
+        name="password"
+        required=""
+        type="password"
+        value=""
+      />
+      <button
+        class="h-12 self-center bg-black text-white p-1 font-bold col-span-2"
+        type="submit"
+      >
+        Sign In
+      </button>
+    </form>
+  </fieldset>
+</div>
+`;

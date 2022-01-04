@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the home view 1`] = `
+<div>
+  <main>
+    <button>
+      log out
+    </button>
+    <form>
+      <fieldset>
+        <legend>
+          Entry
+        </legend>
+        <input
+          type="text"
+          value=""
+        />
+        <button>
+          Add Entry
+        </button>
+      </fieldset>
+    </form>
+    <section>
+      <p>
+        Entries
+      </p>
+    </section>
+  </main>
+</div>
+`;
