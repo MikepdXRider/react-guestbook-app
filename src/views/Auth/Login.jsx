@@ -1,24 +1,37 @@
 // 
 // ✔ Login form here.
 // ✔ Import useUser hook. 
-// on login attempt, check to see if user input matches .env file info. If falsey, give error. If truthy, set user and redirect to the previous page or landing page.
+// ✔ controlled inputs
+// on login attempt..
+//  - check to see if user input matches .env file info. 
+//  - If falsey, give error. 
+//  - If truthy, set user and redirect to the previous page or landing page.
 // 
 
-import React from 'react'
+import React, { useState } from 'react'
 import { useUser } from '../../context/UserContext/UserContext.jsx'
 
 export default function Login() {
     const {username, setUsername} = useUser();
+    const [usernameInput, setUsernameInput] = useState('');
+    const {passwordInput, setPasswordInput} = useState('');
 
     //  *Could be a replaced by a super-duper custom hook instead. Check out previous lab(react-treehouse-lab)
     // handleEmailChange
+    function handleNameChange(e){
+        setUsernameInput(e.target.value);
+    }
+
     // handlePasswordChange
+    function handlePasswordChange(e){
+        setPasswordInput(e.target.value);
+    }
 
     return (
         <fieldset className="w-1/4 border p-4">
             <legend>Sign In</legend>
             <form className="grid grid-cols-[1fr_2fr] grid-rows-3">
-                <label htmlFor="username" className="self-center text-right">
+                <label htmlFor="password" className="self-center text-right">
                     Username
                 </label>
                 <input
@@ -26,6 +39,8 @@ export default function Login() {
                 type="text"
                 name="username"
                 className="border p-2 m-3"
+                value={usernameInput}
+                onChange={handleNameChange}
                 required
                 />
 
@@ -37,6 +52,8 @@ export default function Login() {
                 type="password"
                 name="password"
                 className="border p-2 m-3"
+                value={passwordInput}
+                onChange={handlePasswordChange}
                 required
                 />
 
