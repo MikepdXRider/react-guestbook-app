@@ -3,3 +3,14 @@
 // Import useUser hook. 
 // on login attempt, check to see if user input matches .env file info. If falsey, give error. If truthy, set user and redirect to the previous page or landing page.
 // 
+
+import React from 'react'
+
+export default function Login() {
+    return (
+        <div>
+            This is a login page
+        </div>
+    )
+}
+
