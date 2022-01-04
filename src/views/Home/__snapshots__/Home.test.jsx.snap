@@ -3,22 +3,9 @@
 exports[`renders the home view 1`] = `
 <div>
   <main>
-    <section>
-      <form>
-        <fieldset>
-          <legend>
-            Name
-          </legend>
-          <input
-            type="text"
-            value=""
-          />
-          <button>
-            Add Name
-          </button>
-        </fieldset>
-      </form>
-    </section>
+    <button>
+      log out
+    </button>
     <form>
       <fieldset>
         <legend>
