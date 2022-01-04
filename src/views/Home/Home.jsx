@@ -14,20 +14,9 @@ export default function Home() {
 
     return (
         <main>
-            <section>
-            {/* This whole ternary will be removed because the page will be in a protected route. */}
-            {
-                username 
-                ? <div>
-                    <p>Signed in as {username}</p>
-                    <button onClick={() => handleLogOut()}>log out</button>
-                </div>
-                : <NameForm />
-            }
-            </section>
-
-                <EntryForm />
-                <EntryList />
+            <button onClick={() => handleLogOut()}>log out</button>
+            <EntryForm />
+            <EntryList />
         </main>
     )
 }
